@@ -1,17 +1,24 @@
 
-// *{
-//     /* box-shadow:rgb(0,0,0,0.7) 1px 10px 50px ,rgb(0,0,0,0.7) -5px 0px 250px; */
-//     border-radius:0.5em;
-// }
-
-.FormControl{
-    color:white;
-    
+*{
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
 }
+
 
 
 #main{
-    width:50%;
+    width:100%;
+    height: 100vh;
+    overflow-y:visible;
     margin:auto;
+    background: url('https://images.pexels.com/photos/12843338/pexels-photo-12843338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
 }
 
+@media screen and (max-width:600px)
+{
+    #main>div{
+    width: 100%;
+    }
+}

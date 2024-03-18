@@ -9,15 +9,14 @@ const ContactCard = ({editContact,name,email,id,deleteContact}) => {
       color="white"
       justify="space-between"
       bg="purple"
-      p="4"
-      borderRadius="xl"
+      p="1em"
+      borderRadius="1em"
       boxShadow="xl"
       mb="4"
     >
-    
         <Flex align="center">
           <Box mr="4">
-            <FontAwesomeIcon size="3x" icon={faUser} mr="4" />
+            <FontAwesomeIcon  width={'100%'} size="3x" icon={faUser} mr="4" />
           </Box>
           <Stack>
             <Text>{name}</Text>

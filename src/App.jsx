@@ -1,16 +1,14 @@
 import { Button } from "@chakra-ui/button";
 import { useDisclosure } from "@chakra-ui/hooks";
 import { AddIcon, Search2Icon } from "@chakra-ui/icons";
-import { Image } from "@chakra-ui/image";
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/input";
-
+import {AiFillContacts} from 'react-icons/ai'
 import { Heading, Flex, Box } from "@chakra-ui/layout";
 
-console.log(process.env.REACT_APP_SERVER)
 import ContactCard from "./component/contact";
 import Kmodal from "./component/kModal";
 import ContactForm from "./component/ContactForm";
-import { useReducer, useState } from "react";
+import {  useState } from "react";
 import ContactsDb from "./data/Contacts";
 const App = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -53,11 +51,10 @@ const App = () => {
           addContact={addContact}
         />
       </Kmodal>
-      <Box>
+      <Box width={'50%'} margin={'auto'}>
         <Flex p="4" justify="center" align="center">
-          <Image src="src/assets/react.svg" w="150px" h="100px" />
-          <Heading as="h1" textTransform="uppercase">
-            Contact App
+          <Heading display={'flex'} gap={'0.8em'} color={'white'} as="h1" textTransform="uppercase">
+            <AiFillContacts size={50}/>   Contact App
           </Heading>
         </Flex>
         <Box p="4">

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, FormControl, FormLabel, Stack } from "@chakra-ui/react";
+import { Button, FormControl, FormLabel, Input, Stack } from "@chakra-ui/react";
 
 const initialValue = {
   name: "",
@@ -38,15 +38,15 @@ const ContactForm = ({
   return (
     <div>
       <Stack
-        id="Contact Form"
+        width={'100%'}
         bg=" #B931FC"
-        w="calc(50%/1.87)"
-        m="auto"
-        borderRadius="10%"
+        padding={'1em'}
+        color={'white'}
+        borderRadius={'3px'}
       >
         <FormControl className="FormControl">
-          <FormLabel>Name</FormLabel>
-          <input
+          <FormLabel >Name</FormLabel>
+          <Input
             onChange={handleChange}
             name="name"
             type="text"
@@ -54,8 +54,8 @@ const ContactForm = ({
           />
         </FormControl>
         <FormControl className="FormControl">
-          <FormLabel>email address</FormLabel>
-          <input
+          <FormLabel >Email address</FormLabel>
+          <Input
             onChange={handleChange}
             name="email"
             type="email"
@@ -66,10 +66,6 @@ const ContactForm = ({
           onClick={handleSubmit}
           cursor="pointer"
           type="submit"
-          bg="blue"
-          color="white"
-          borderRadius="10%"
-          alignSelf="flex-end"
         >
           {editableContact ? "Edit" : "Add"}Contact
         </Button>
